@@ -259,7 +259,7 @@ class CountVectorsFeaturizer(Featurizer):
                         self._combine_with_existing_text_features(example,
                                                                   X[i]))
 
-    def process(self, message, **kwargs):
+    def process(self, message, tracker, **kwargs):
         # type: (Message, **Any) -> None
         if self.vect is None:
             logger.error("There is no trained CountVectorizer: "

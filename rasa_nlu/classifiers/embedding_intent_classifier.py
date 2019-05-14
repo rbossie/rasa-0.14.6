@@ -596,7 +596,7 @@ class EmbeddingIntentClassifier(Component):
         return intent_ids, message_sim.tolist()
 
     # noinspection PyPep8Naming
-    def process(self, message, **kwargs):
+    def process(self, message, tracker, **kwargs):
         # type: (Message, Any) -> None
         """Return the most likely intent and its similarity to the input."""
 

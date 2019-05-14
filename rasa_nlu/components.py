@@ -268,7 +268,7 @@ class Component(object):
         of components previous to this one."""
         pass
 
-    def process(self, message, **kwargs):
+    def process(self, message, tracker, **kwargs):
         # type: (Message, **Any) -> None
         """Process an incoming message.
 
