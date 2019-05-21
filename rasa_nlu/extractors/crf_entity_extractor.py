@@ -159,7 +159,7 @@ class CRFEntityExtractor(EntityExtractor):
                 'See https://nlu.rasa.com/pipeline.html#nlp-spacy '
                 'for details'.format(message.text))
 
-    def process(self, message, **kwargs):
+    def process(self, message, tracker, **kwargs):
         # type: (Message, **Any) -> None
 
         self._check_spacy_doc(message)

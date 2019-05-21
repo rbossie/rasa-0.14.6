@@ -24,7 +24,7 @@ class WhitespaceTokenizer(Tokenizer, Component):
         for example in training_data.training_examples:
             example.set("tokens", self.tokenize(example.text))
 
-    def process(self, message, **kwargs):
+    def process(self, message, tracker, **kwargs):
         # type: (Message, **Any) -> None
 
         message.set("tokens", self.tokenize(message.text))

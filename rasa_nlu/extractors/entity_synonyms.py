@@ -46,7 +46,7 @@ class EntitySynonymMapper(EntityExtractor):
                 self.add_entities_if_synonyms(entity_val,
                                               str(entity.get("value")))
 
-    def process(self, message, **kwargs):
+    def process(self, message, tracker, **kwargs):
         # type: (Message, **Any) -> None
 
         updated_entities = message.get("entities", [])[:]
